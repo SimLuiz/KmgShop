@@ -1,176 +1,195 @@
 /* Estilos globais */
 body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+    background-color: black; /* Define o fundo da página como preto */
+    color: white; /* Define a cor padrão do texto como branco */
+    font-family: Arial, sans-serif; /* Fonte global da página */
+    margin: 0; /* Remove a margem padrão do corpo */
+    padding: 0; /* Remove o padding padrão do corpo */
+    min-height: 100vh; /* Garante que o corpo ocupe no mínimo 100% da altura da janela */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Disposição dos elementos em coluna */
   }
   
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 1200px; /* Define a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px; /* Espaçamento interno de 20px */
   }
   
   .header,
   .footer {
-    background-color: #1f1f1f;
-    padding: 20px;
+    background-color: white; /* Cor de fundo escura para o cabeçalho e rodapé */
+    padding: 20px; /* Adiciona padding interno de 20px */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Espaça os itens nas extremidades */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    color: black;
   }
   
   .header img,
   .footer img {
-    width: 150px;
+    width: 150px; /* Define o tamanho das imagens do cabeçalho e rodapé */
   }
   
   .footer .payment-icons img {
-    width: 50px;
-    margin-left: 10px;
+    width: 50px; /* Define o tamanho das imagens dos ícones de pagamento */
+    margin-left: 10px; /* Adiciona um espaçamento de 10px entre os ícones de pagamento */
   }
   
   .main-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
+    justify-content: space-between; /* Espaça os itens de conteúdo principal */
+    flex-grow: 1; /* Faz com que o conteúdo principal ocupe o máximo possível do espaço */
   }
   
   h1,
   h2 {
-    text-align: center;
-    font-weight: bold;
+    text-align: center; /* Centraliza os títulos h1 e h2 */
+    font-weight: bold; /* Define o texto como negrito */
   }
   
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Define o tamanho da fonte do h1 */
   }
   
   h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Define o tamanho da fonte do h2 */
+    margin-bottom: 20px; /* Adiciona um espaçamento abaixo do h2 */
   }
   
   .grid {
-    display: grid;
-    gap: 20px;
+    display: grid; /* Usa o sistema de grid para organizar os elementos */
+    gap: 20px; /* Define o espaçamento entre os itens da grid */
   }
   
   .grid-2 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Divide o layout da grid em duas colunas */
   }
   
   /* Cartões com fundo branco */
   .card {
-    background-color: white; /* Fundo branco */
-    color: black;            /* Texto em preto para contraste */
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px; /* Adiciona espaço entre os cartões */
+    background-color: white; /* Define o fundo branco para os cartões */
+    color: black; /* Texto em preto dentro dos cartões */
+    padding: 20px; /* Adiciona espaçamento interno de 20px */
+    border-radius: 10px; /* Arredonda os cantos dos cartões */
+    margin-bottom: 30px; /* Adiciona espaçamento abaixo dos cartões */
+  }
+
+  /* Centralizar apenas os itens dentro da seção "Informações de Entrega" */
+.card.delivery-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
   }
   
+  .form-group,
+  .checkbox-group {
+    width: 100%; /* Mantém os campos ocupando toda a largura */
+  }
+  
+
   .radio-group {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border: 1px solid #444;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    display: flex; /* Alinha os elementos de entrega (input e label) em linha */
+    justify-content: space-between; /* Espaça os elementos nas extremidades */
+    padding: 10px; /* Adiciona padding interno de 10px */
+    border: 1px solid #444; /* Adiciona uma borda cinza ao redor do grupo */
+    border-radius: 10px; /* Arredonda os cantos do grupo */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave ao mudar a cor do fundo */
   }
   
   .radio-group:hover {
-    background-color: #eee; /* Claro ao passar o mouse */
+    background-color: #eee; /* Muda a cor do fundo ao passar o mouse sobre o grupo */
   }
   
   .radio-group input[type="radio"] {
-    margin-right: 10px;
+    margin-right: 10px; /* Espaçamento entre o input e o label */
   }
   
   .radio-group label {
-    font-size: 1rem;
+    font-size: 1rem; /* Define o tamanho da fonte do label */
   }
   
   .summary-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    display: flex; /* Alinha os itens de resumo em linha */
+    justify-content: space-between; /* Espaça os itens nas extremidades */
+    margin-bottom: 10px; /* Espaçamento abaixo de cada item do resumo */
   }
   
   .summary-total {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-top: 20px;
+    font-size: 1.25rem; /* Define o tamanho da fonte do total */
+    font-weight: bold; /* Deixa o total em negrito */
+    margin-top: 20px; /* Adiciona um espaçamento acima do total */
   }
   
   button.btn {
-    background-color: #28a745;
-    border: none;
-    padding: 15px 30px;
-    color: white;
-    border-radius: 10px;
-    font-size: 1.25rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #28a745; /* Define a cor verde do botão */
+    border: none; /* Remove as bordas do botão */
+    padding: 15px 30px; /* Define o espaçamento interno do botão */
+    color: white; /* Texto branco no botão */
+    border-radius: 10px; /* Arredonda os cantos do botão */
+    font-size: 1.25rem; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Define o cursor como ponteiro ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Transição suave ao alterar a cor de fundo */
   }
   
   button.btn:hover {
-    background-color: #218838;
+    background-color: #218838; /* Muda a cor de fundo ao passar o mouse */
   }
   
   /* Formulário de entrega */
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espaçamento inferior entre os grupos de formulários */
   }
   
   .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
+    display: block; /* Coloca o label em bloco */
+    margin-bottom: 8px; /* Espaçamento inferior do label */
+    font-size: 0.9rem; /* Define o tamanho da fonte dos labels */
   }
   
   .form-group input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #444;
-    background-color: #f9f9f9; /* Fundo claro para inputs */
-    color: black;
-    outline: none;
+    width: 100%; /* Faz o input ocupar toda a largura disponível */
+    padding: 10px; /* Adiciona espaçamento interno no input */
+    border-radius: 8px; /* Arredonda os cantos do input */
+    border: 1px solid #444; /* Adiciona uma borda cinza ao input */
+    background-color: #f9f9f9; /* Define a cor de fundo clara do input */
+    color: black; /* Texto preto dentro do input */
+    outline: none; /* Remove o contorno padrão ao focar no input */
   }
   
   .form-group input:focus {
-    border-color: #555;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+    border-color: #555; /* Muda a cor da borda ao focar no input */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1); /* Adiciona uma sombra ao redor do input */
   }
   
   .checkbox-group {
-    display: flex;
-    align-items: center;
+    display: flex; /* Coloca o input checkbox e o label em linha */
+    align-items: center; /* Alinha verticalmente o checkbox e o label */
   }
   
   .checkbox-group input {
-    margin-right: 10px;
+    margin-right: 10px; /* Espaçamento entre o checkbox e o label */
   }
   
+  /* Rodapé */
   .footer {
-    padding: 20px;
-    background-color: #333;
+    padding: 20px; /* Adiciona espaçamento interno no rodapé */
+    background-color: white; /* Define o fundo branco do rodapé */
+    color: black; /* Define o texto como preto no rodapé */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaça os itens no rodapé */
   }
   
   .footer img {
-    width: 150px;
+    width: 150px; /* Define o tamanho da imagem no rodapé */
+    color: black; /* Define a cor do texto preto */
   }
   
   .payment-icons img {
-    width: 50px;
-    margin-right: 10px;
+    width: 50px; /* Define o tamanho dos ícones de pagamento */
+    margin-right: 10px; /* Adiciona espaçamento entre os ícones de pagamento */
+    color: black;
   }
   

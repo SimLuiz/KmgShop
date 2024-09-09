@@ -1,29 +1,36 @@
 import React from 'react';
 import './style.css'; // Certifique-se de importar o CSS correto
 
+// Função principal da página de Checkout
 const CheckoutPage = () => {
   return (
     <div className="checkout-page">
       {/* Cabeçalho */}
       <div className="container">
+        {/* Seção do cabeçalho com logo e mensagem de compra segura */}
         <div className="header">
+          {/* Logo da loja */}
           <img
-            src="https://via.placeholder.com/150x50?text=KMG+Shop"
+            src="https://via.placeholder.com/150x50/000000/FFFFFF?text=KMG+Shop"
             alt="KMG Shop Logo"
           />
+          {/* Mensagem de segurança para o cliente */}
           <span className="secure-purchase">COMPRA SEGURA 🔒</span>
         </div>
 
+        {/* Título da página de checkout */}
         <h1 className="title">Finalizar Compra</h1>
 
-        {/* Blocos lado a lado */}
+        {/* Blocos lado a lado: Forma de entrega e Informações de entrega */}
         <div className="grid grid-2">
           {/* Forma de Entrega (lado esquerdo) */}
           <div className="card">
             <h2 className="subtitle">Forma de Entrega</h2>
+            {/* Opções de forma de entrega */}
             <div className="space-y-4">
               <div className="radio-group">
                 <div className="flex items-center">
+                  {/* Opção de entrega "Normal" */}
                   <input type="radio" name="entrega" id="normal" />
                   <label htmlFor="normal">Normal</label>
                 </div>
@@ -31,6 +38,7 @@ const CheckoutPage = () => {
               </div>
               <div className="radio-group">
                 <div className="flex items-center">
+                  {/* Opção de entrega "Sedex" */}
                   <input type="radio" name="entrega" id="sedex" />
                   <label htmlFor="sedex">Sedex</label>
                 </div>
@@ -38,6 +46,7 @@ const CheckoutPage = () => {
               </div>
               <div className="radio-group">
                 <div className="flex items-center">
+                  {/* Opção de entrega "Pac" */}
                   <input type="radio" name="entrega" id="pac" />
                   <label htmlFor="pac">Pac</label>
                 </div>
@@ -47,14 +56,17 @@ const CheckoutPage = () => {
           </div>
 
           {/* Informações de Entrega (lado direito) */}
-          <div className="card">
+          <div className="card delivery-info">
             <h2 className="subtitle">Informações de Entrega</h2>
+            {/* Formulário para informações de entrega */}
             <form className="space-y-6">
+              {/* Campo para endereço */}
               <div className="form-group">
                 <label>Endereço:</label>
                 <input type="text" placeholder="Digite o endereço" />
               </div>
               <div className="grid grid-2">
+                {/* Campos para número e ponto de referência */}
                 <div className="form-group">
                   <label>Número:</label>
                   <input type="text" placeholder="Número" />
@@ -64,10 +76,12 @@ const CheckoutPage = () => {
                   <input type="text" placeholder="Opcional" />
                 </div>
               </div>
+              {/* Campo para destinatário */}
               <div className="form-group">
                 <label>Destinatário:</label>
                 <input type="text" placeholder="Nome do destinatário" />
               </div>
+              {/* Opção para salvar como endereço padrão */}
               <div className="checkbox-group">
                 <input type="checkbox" id="defaultAddress" />
                 <label htmlFor="defaultAddress">Salvar como Endereço Padrão</label>
@@ -79,18 +93,22 @@ const CheckoutPage = () => {
         {/* Resumo do Pedido */}
         <div className="summary card">
           <h2 className="subtitle">Resumo do Pedido</h2>
+          {/* Exibição de um produto no resumo */}
           <div className="summary-item">
+            {/* Imagem do produto */}
             <img
               src="https://via.placeholder.com/100"
               alt="Produto"
               className="product-image"
             />
             <div className="summary-product">
+              {/* Nome e referência do produto */}
               <p className="font-semibold">Camiseta básica preta</p>
               <p className="text-gray-400 text-sm">Ref: 293843</p>
             </div>
           </div>
           <div className="space-y-2">
+            {/* Informações do cupom e subtotal */}
             <p className="summary-item">
               <span>Cupom</span> <span>R$ 10,00</span>
             </p>
@@ -98,12 +116,13 @@ const CheckoutPage = () => {
               <span>Subtotal</span> <span>R$ 39,99</span>
             </p>
             <hr />
+            {/* Total do pedido */}
             <p className="summary-item font-bold">
               <span>Total</span> <span>R$ 39,99</span>
             </p>
           </div>
 
-          {/* Botão de Finalizar Pedido */}
+          {/* Botão para finalizar o pedido */}
           <div className="text-center">
             <button className="btn">Finalizar Pedido</button>
           </div>
@@ -112,17 +131,16 @@ const CheckoutPage = () => {
 
       {/* Rodapé */}
       <footer className="footer">
+        {/* Logo do rodapé */}
         <img
-          src="https://via.placeholder.com/150x50?text=KMG+Shop"
+          src="https://via.placeholder.com/150x50/000000/FFFFFF?text=KMG+Shop"
           alt="KMG Shop Logo"
         />
+        {/* Ícones de pagamento no rodapé */}
         <div className="payment-icons">
-          <img src="https://via.placeholder.com/50x30?text=Visa" alt="Visa" />
-          <img
-            src="https://via.placeholder.com/50x30?text=Mastercard"
-            alt="Mastercard"
-          />
-          <img src="https://via.placeholder.com/50x30?text=Elo" alt="Elo" />
+          <img src="https://via.placeholder.com/50x30/000000/FFFFFF?text=Visa" alt="Visa" />
+          <img src="https://via.placeholder.com/50x30/000000/FFFFFF?text=Mastercard" alt="Mastercard" />
+          <img src="https://via.placeholder.com/50x30/000000/FFFFFF?text=Elo" alt="Elo" />
         </div>
       </footer>
     </div>
