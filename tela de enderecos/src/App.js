@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css'; // Certifique-se de importar o CSS correto
+import './style.css';
 
 // Função principal da página de Checkout
 const CheckoutPage = () => {
@@ -10,16 +10,14 @@ const CheckoutPage = () => {
         {/* Seção do cabeçalho com logo e mensagem de compra segura */}
         <div className="header">
           {/* Logo da loja */}
-          <img
-            src="https://via.placeholder.com/150x50/000000/FFFFFF?text=KMG+Shop"
-            alt="KMG Shop Logo"
-          />
+          <img src="/images/logo.jpeg" alt="KMG Shop" />
+
           {/* Mensagem de segurança para o cliente */}
           <span className="secure-purchase">COMPRA SEGURA 🔒</span>
         </div>
 
         {/* Título da página de checkout */}
-        <h1 className="title">Finalizar Compra</h1>
+        <h2 className="title">Finalizar Compra</h2>
 
         {/* Blocos lado a lado: Forma de entrega e Informações de entrega */}
         <div className="grid grid-2">
@@ -96,11 +94,8 @@ const CheckoutPage = () => {
           {/* Exibição de um produto no resumo */}
           <div className="summary-item">
             {/* Imagem do produto */}
-            <img
-              src="https://via.placeholder.com/100"
-              alt="Produto"
-              className="product-image"
-            />
+            <img src="/images/camiseta_preta.png" alt="Camiseta preta básica" style={{ width: '100px', height: 'auto' }} />
+
             <div className="summary-product">
               {/* Nome e referência do produto */}
               <p className="font-semibold">Camiseta básica preta</p>
@@ -132,16 +127,14 @@ const CheckoutPage = () => {
       {/* Rodapé */}
       <footer className="footer">
         {/* Logo do rodapé */}
-        <img
-          src="https://via.placeholder.com/150x50/000000/FFFFFF?text=KMG+Shop"
-          alt="KMG Shop Logo"
-        />
+        <img src="/images/logo.jpeg" alt="KMG Shop" />
+
         {/* Ícones de pagamento no rodapé */}
         <div className="payment-icons">
-          <img src="https://via.placeholder.com/50x30/000000/FFFFFF?text=Visa" alt="Visa" />
-          <img src="https://via.placeholder.com/50x30/000000/FFFFFF?text=Mastercard" alt="Mastercard" />
-          <img src="https://via.placeholder.com/50x30/000000/FFFFFF?text=Elo" alt="Elo" />
-        </div>
+          <img src="/images/visa.png" alt="Visa" style={{ width: '80px', height: 'auto' }} />
+          <img src="/images/mastercard.png" alt="Mastercard" style={{ width: '80px', height: 'auto' }} />
+          <img src="/images/elo.png" alt="Elo" style={{ width: '80px ', height: 'auto' }}/>
+          </div>
       </footer>
     </div>
   );

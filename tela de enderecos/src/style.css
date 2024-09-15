@@ -1,7 +1,6 @@
-/* Estilos globais */
 body {
-    background-color: black; /* Define o fundo da página como preto */
-    color: white; /* Define a cor padrão do texto como branco */
+    background-color: white; /* Define o fundo da página como preto */
+    color: black; /* Define a cor padrão do texto como branco */
     font-family: Arial, sans-serif; /* Fonte global da página */
     margin: 0; /* Remove a margem padrão do corpo */
     padding: 0; /* Remove o padding padrão do corpo */
@@ -9,7 +8,14 @@ body {
     display: flex;
     flex-direction: column; /* Disposição dos elementos em coluna */
   }
-  
+
+  /* Aumentando o tamanho da fonte do título */
+.title {
+  font-size: 3rem; /* Aumente esse valor para o tamanho desejado */
+  font-weight: bold; /* Deixe o título em negrito */
+  text-align: center; /* (Opcional) Centraliza o título */
+}
+
   .container {
     max-width: 1200px; /* Define a largura máxima do container */
     margin: 0 auto; /* Centraliza o container horizontalmente */
@@ -18,12 +24,12 @@ body {
   
   .header,
   .footer {
-    background-color: white; /* Cor de fundo escura para o cabeçalho e rodapé */
+    background-color: black; /* Cor de fundo escura para o cabeçalho e rodapé */
     padding: 20px; /* Adiciona padding interno de 20px */
     display: flex;
     justify-content: space-between; /* Espaça os itens nas extremidades */
     align-items: center; /* Alinha verticalmente os itens no centro */
-    color: black;
+    color: white;
   }
   
   .header img,
@@ -176,20 +182,65 @@ body {
   /* Rodapé */
   .footer {
     padding: 20px; /* Adiciona espaçamento interno no rodapé */
-    background-color: white; /* Define o fundo branco do rodapé */
-    color: black; /* Define o texto como preto no rodapé */
+    background-color: black; /* Define o fundo branco do rodapé */
+    color: white; /* Define o texto como preto no rodapé */
     display: flex;
     justify-content: space-between; /* Espaça os itens no rodapé */
   }
   
   .footer img {
     width: 150px; /* Define o tamanho da imagem no rodapé */
-    color: black; /* Define a cor do texto preto */
+    color: white; /* Define a cor do texto preto */
+  }
+  
+  .payment-icons {
+    display: flex; /* Alinha os itens em linha */
   }
   
   .payment-icons img {
     width: 50px; /* Define o tamanho dos ícones de pagamento */
-    margin-right: 10px; /* Adiciona espaçamento entre os ícones de pagamento */
-    color: black;
+    margin-right: 10px; /* Adiciona espaçamento entre os ícones */
   }
+  
+  .payment-icons img:last-child {
+    margin-right: 0; /* Remove o espaçamento do último ícone */
+  }
+  
+
+  /* Cartões com borda */
+.card {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc; /* Adiciona borda nos cartões */
+}
+
+/* Itens de formulário com borda */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc; /* Adiciona borda nos inputs do formulário */
+  background-color: #f9f9f9;
+  color: black;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #555;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Sombra no foco */
+}
+
+/* Itens de resumo de pedido com borda */
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px; /* Adiciona espaçamento interno */
+  border: 1px solid #ccc; /* Adiciona borda nos itens de resumo */
+  border-radius: 8px; /* Arredonda os cantos */
+}
+
   
