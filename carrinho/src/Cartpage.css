@@ -1,0 +1,352 @@
+/* Estilos para a página do carrinho de compras */
+.cart-page {
+  background-color: #f7f7f7; /* Define a cor de fundo da página como cinza claro */
+  color: black; /* Define a cor do texto como preto */
+  font-family: Arial, sans-serif; /* Define a fonte global como Arial */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  background-color: #F0F0F0; /* Define a cor de fundo geral da página como cinza muito claro */
+  color: black; /* Define a cor do texto como preto */
+  font-family: Arial, sans-serif; /* Define a fonte geral como Arial */
+  margin: 0; /* Remove as margens padrão do body */
+  padding: 0; /* Remove o padding padrão do body */
+  min-height: 100vh; /* Define a altura mínima da página como 100% da altura da tela */
+  display: flex; /* Configura um layout flexível para o body */
+  flex-direction: column; /* Organiza os elementos em uma coluna vertical */
+  transform: scale(0.8); /* Aplica um zoom de 80% */
+  transform-origin: top left; /* Define o ponto de origem da transformação */
+  width: 125%; /* Ajuste para compensar o redimensionamento */
+  height: 100vh; /* Garante que o body preencha 100% da altura da viewport */
+  margin: 0; /* Remove margens extras do body */
+}
+
+/* Container principal da página */
+.container {
+  justify-content: space-between; /* Espaça os itens dentro do container para os lados opostos */
+  align-items: flex-start; /* Alinha os itens ao topo do container */
+  gap: 30px; /* Define um espaçamento de 20px entre os itens */
+  max-width: 1200px; /* Define a largura máxima do container como 1200px */
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  padding: 80px 30px; /* Adiciona espaçamento interno ao container (80px no topo e embaixo, 30px nas laterais) */
+  box-sizing: border-box; /* Inclui o padding e a borda na largura total do elemento */
+}
+
+/* Estilos do cabeçalho */
+.header {
+  background-color: black; /* Define a cor de fundo do cabeçalho como preto */
+  color: white; /* Define a cor do texto do cabeçalho como branco */
+  padding: 20px 30px; /* Adiciona padding ao cabeçalho (20px no topo/baixo e 30px nas laterais) */
+  display: flex; /* Configura um layout flexível para o cabeçalho */
+  justify-content: space-between; /* Espaça os itens do cabeçalho para os lados opostos */
+  align-items: center; /* Alinha os itens verticalmente ao centro do cabeçalho */
+  width: 100%; /* Faz com que o cabeçalho ocupe toda a largura da página */
+  position: static; /* Remove qualquer posição fixa (fixada) do cabeçalho */
+  box-sizing: border-box; /* Inclui o padding e a borda na largura total do cabeçalho */
+}
+
+.header-title h1 {
+  color: white; /* Define a cor do texto do título como branco */
+  margin: 0; /* Remove a margem do título */
+  font-size: 24px; /* Define o tamanho da fonte do título como 24px */
+}
+
+/* Estilos do título principal da página */
+.title {
+  font-size: 32px; /* Define o tamanho da fonte do título principal como 32px */
+  font-weight: bold; /* Define o título principal em negrito */
+  text-align: center; /* Alinha o título principal ao centro */
+  margin-top: 80px; /* Adiciona uma margem superior de 80px para distanciar o título do cabeçalho */
+}
+
+/* Estilos dos itens do carrinho */
+.cart-items {
+  flex: auto;
+  display: flex; /* Configura um layout flexível para os itens do carrinho */
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha quando necessário */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Define colunas flexíveis com tamanho mínimo de 350px */
+  gap: 20px; /* Define um espaçamento de 20px entre os itens do carrinho */
+  margin-top: 20px; /* Adiciona uma margem superior de 20px */
+  margin-right: 20px; /* Espaçamento entre o carrinho e as promoções */
+
+}
+
+/* Estilos para cada item do carrinho */
+.cart-item {
+  display: flex;
+  flex: auto; /* Faz com que o item do carrinho se ajuste ao espaço disponível */
+  background-color: black; /* Define a cor de fundo dos itens do carrinho como preto */
+  color: white; /* Define a cor do texto como branco */
+  border-radius: 8px; /* Arredonda as bordas dos itens do carrinho em 8px */
+  padding: 20px; /* Define um padding de 20px para os itens do carrinho */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil aos itens */
+  display: flex; /* Configura um layout flexível para o item */
+  gap: 15px; /* Define um espaçamento de 15px entre a imagem e os detalhes do item */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  width: calc(33.333% - 20px); /* Faz com que o item ocupe cerca de 1/3 da largura disponível */
+  box-sizing: border-box; /* Inclui o padding e a borda na largura total do item */
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  max-width: 1200px;
+}
+
+.cart-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-item-image {
+  margin-right: 10px;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para a seção de promoções */
+.promotions {
+  flex: auto;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  left: 20px; /* passou para o lado esquerdo da tela */
+  border-radius: 8px;
+  float: left;
+}
+
+.promo-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.promo-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.promo-item-image {
+  margin-right: 10px;
+  border-radius: 8px; /* Arredonda as bordas da imagem em 8px */
+}
+
+.promo-item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-price {
+  color: #ff5722;
+  font-weight: bold;
+}
+
+.btn-add-to-cart {
+  background-color: #2196f3;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px; /* Arredonda as bordas da imagem em 8px */
+
+}
+
+
+/* Estilos para a seção de promoções 2*/
+.promotions2 {
+  flex: auto;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  right: 20px; /* passou para o lado esquerdo da tela */
+  border-radius: 8px;
+  float: right;
+}
+
+.promo-title2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.promo-item2 {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.promo-item-image2 {
+  margin-right: 10px;
+  border-radius: 8px; /* Arredonda as bordas da imagem em 8px */
+}
+
+.promo-item-details2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-price2 {
+  color: #ff5722;
+  font-weight: bold;
+}
+
+.btn-add-to-cart2 {
+  background-color: #2196f3;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px; /* Arredonda as bordas da imagem em 8px */
+}
+
+
+
+
+/* Responsividade: ajusta o layout para telas menores */
+@media (max-width: 768px) {
+  .cart-item {
+    width: calc(50% - 20px); /* Reduz a largura dos itens do carrinho para 50% em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-item {
+    width: 100%; /* Faz com que os itens ocupem 100% da largura em telas muito pequenas */
+  }
+}
+
+/* Estilos da imagem do item do carrinho */
+.cart-item-image {
+  width: 100px; /* Define a largura da imagem como 100px */
+  height: 100px; /* Define a altura da imagem como 100px */
+  object-fit: cover; /* Faz a imagem cobrir toda a área sem distorcer */
+  border-radius: 8px; /* Arredonda as bordas da imagem em 8px */
+}
+
+/* Estilos para os detalhes do item do carrinho */
+.cart-item-details {
+  flex: 1; /* Faz com que os detalhes do item se expandam para ocupar o espaço restante */
+  flex-direction: column;
+}
+
+.font-semibold {
+  font-weight: 600; /* Define o peso da fonte como seminegrito */
+}
+
+.text-gray-400 {
+  color: #9e9e9e; /* Define a cor do texto como cinza claro */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* Define o tamanho da fonte como pequeno (0.875rem) */
+}
+
+/* Estilos para o botão de remover item */
+.btn-remove {
+  background-color: red; /* Define a cor de fundo do botão como vermelho */
+  color: white; /* Define a cor do texto do botão como branco */
+  border: none; /* Remove a borda do botão */
+  padding: 8px 12px; /* Define o padding interno do botão */
+  border-radius: 4px; /* Arredonda as bordas do botão em 4px */
+  cursor: pointer; /* Altera o cursor para ponteiro ao passar sobre o botão */
+  font-size: 0.875rem; /* Define o tamanho da fonte do botão */
+}
+
+.btn-remove:hover {
+  background-color: darkred; /* Muda a cor de fundo para vermelho escuro ao passar o mouse sobre o botão */
+}
+
+/* Estilos para o resumo do carrinho */
+.cart-summary {
+  max-width: 1400px; /* Define a largura máxima como 1200px */
+  background-color: black; /* Define a cor de fundo como preto */
+  color: white; /* Define a cor do texto como branco */
+  border-radius: 8px; /* Arredonda as bordas em 8px */
+  padding: 25px; /* Define o padding interno como 25px */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+  margin-top: 20px; /* Adiciona uma margem superior de 20px */
+  margin-bottom: 20px;
+  width: 100%; /* Define a largura do resumo como 100% */
+  box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+.subtitle {
+  font-size: 24px; /* Define o tamanho da fonte como 24px */
+  font-weight: bold; /* Define o texto em negrito */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+}
+
+/* Estilos para os itens do resumo */
+.summary-item {
+  display: flex; /* Configura um layout flexível para os itens do resumo */
+  justify-content: space-between; /* Espaça os itens para os lados opostos */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+}
+
+.summary-item:last-child {
+  margin-bottom: 0; /* Remove a margem inferior do último item */
+}
+
+hr {
+  border: 0; /* Remove a borda padrão do hr */
+  border-top: 1px solid #e0e0e0; /* Adiciona uma linha superior fina */
+  margin: 10px 0; /* Adiciona margens superiores e inferiores */
+}
+
+/* Estilos para o botão de checkout */
+.btn {
+  background-color: green; /* Define a cor de fundo como verde */
+  color: white; /* Define a cor do texto como branco */
+  border: none; /* Remove a borda do botão */
+  padding: 10px 20px; /* Define o padding interno do botão */
+  border-radius: 4px; /* Arredonda as bordas em 4px */
+  cursor: pointer; /* Altera o cursor para ponteiro ao passar sobre o botão */
+  font-size: 1rem; /* Define o tamanho da fonte do botão */
+}
+
+.btn:hover {
+  background-color: rgba(11, 158, 6, 0.863); /* Muda a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilos do rodapé */
+.footer {
+  background-color: black; /* Define a cor de fundo do rodapé como preto */
+  color: white; /* Define a cor do texto como branco */
+  padding: 20px 30px; /* Define padding no rodapé */
+  display: flex; /* Configura um layout flexível */
+  justify-content: space-between; /* Espaça os itens do rodapé para as extremidades */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+  position: static; /* Remove qualquer posição fixa do rodapé */
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+/* Ajuste a altura das imagens no cabeçalho e rodapé */
+.header img {
+  width: 120px; /* Define a largura da imagem do cabeçalho como 120px */
+}
+
+.footer img {
+  width: 150px; /* Define o tamanho da imagem no rodapé */
+  color: white; /* Define a cor do texto preto */
+}
+
+.payment-icons {
+  display: flex; /* Alinha os itens em linha */
+}
+
+.payment-icons img {
+  width: 50px; /* Define o tamanho dos ícones de pagamento */
+  margin-right: 10px; /* Adiciona espaçamento entre os ícones */
+}
+
+.payment-icons img:last-child {
+  margin-right: 0; /* Remove o espaçamento do último ícone */
+}
